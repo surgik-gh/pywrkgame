@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\5fafbf0abf90a62bdcb7b399602fe47f\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\4433337d3d7079dafc3ef791a802f28e\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\43b5f5ee0396320d6bbe081a7a3d9c7a\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\projects\lib\pyworkergame\tests\test_build_debug\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{51553823-86AA-3639-8248-C50E193DDA61}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

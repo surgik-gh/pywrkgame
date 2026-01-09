@@ -1,0 +1,16 @@
+"""
+Test configuration for PyWRKGame tests
+"""
+
+import sys
+import os
+
+# Add the build directory to Python path so we can import the compiled module
+build_dir = "@CMAKE_CURRENT_BINARY_DIR@"
+if build_dir not in sys.path:
+    sys.path.insert(0, build_dir)
+
+# Add the source directory for any Python utilities
+src_dir = os.path.join(os.path.dirname(__file__), "..", "..", "python")
+if src_dir not in sys.path:
+    sys.path.insert(0, src_dir)

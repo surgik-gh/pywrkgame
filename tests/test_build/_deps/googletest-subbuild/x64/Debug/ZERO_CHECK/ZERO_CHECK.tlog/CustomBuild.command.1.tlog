@@ -1,0 +1,10 @@
+^D:\PROJECTS\LIB\PYWORKERGAME\TESTS\TEST_BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\93E4B81A9E00BBD247C3FB54A6875760\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/projects/lib/pyworkergame/tests/test_build/_deps/googletest-subbuild -BD:/projects/lib/pyworkergame/tests/test_build/_deps/googletest-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/projects/lib/pyworkergame/tests/test_build/_deps/googletest-subbuild/googletest-populate.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
