@@ -1,4 +1,4 @@
-# PyWRKGame 3.0.2
+# PyWRKGame 3.0.3
 
 🎮 **High-Performance Game Engine for Python**
 
@@ -29,39 +29,58 @@ PyWRKGame 3.0.0 is a revolutionary game development library with a C/C++ core an
 
 ## 📦 Installation
 
-### Prerequisites
+### ⚠️ Important: Install C++ Dependencies First
 
-PyWRKGame requires C++ dependencies for compilation. Install them first:
+PyWRKGame requires C++ libraries that **must be installed before** running `pip install`. Choose your platform:
 
-**Windows (using vcpkg):**
+#### Windows (using vcpkg - recommended)
+
 ```bash
-# Install vcpkg
+# 1. Install vcpkg (one-time setup)
 git clone https://github.com/Microsoft/vcpkg.git
 cd vcpkg
 .\bootstrap-vcpkg.bat
 
-# Install dependencies
-.\vcpkg install glm box2d bullet3
-```
+# 2. Install dependencies
+.\vcpkg install glm:x64-windows box2d:x64-windows bullet3:x64-windows
 
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt-get update
-sudo apt-get install libglm-dev libbox2d-dev libbullet-dev build-essential
-```
+# 3. Integrate with Visual Studio
+.\vcpkg integrate install
 
-**macOS:**
-```bash
-brew install glm box2d bullet
-```
-
-### Install PyWRKGame
-
-```bash
+# 4. Now install PyWRKGame
 pip install pywrkgame
 ```
 
-**Note:** PyWRKGame is currently distributed as source code and compiles during installation. Pre-built wheels coming soon!
+#### Linux (Ubuntu/Debian)
+
+```bash
+# 1. Install dependencies
+sudo apt-get update
+sudo apt-get install -y libglm-dev libbox2d-dev libbullet-dev build-essential python3-dev
+
+# 2. Now install PyWRKGame
+pip install pywrkgame
+```
+
+#### macOS
+
+```bash
+# 1. Install dependencies
+brew install glm box2d bullet
+
+# 2. Now install PyWRKGame
+pip install pywrkgame
+```
+
+### Troubleshooting
+
+If you see errors about missing `glm/glm.hpp`, `Box2D`, or `Bullet3`:
+1. Make sure you installed the C++ dependencies above
+2. On Windows, run `vcpkg integrate install` after installing libraries
+3. On Linux, ensure `build-essential` and `python3-dev` are installed
+4. Try installing in a clean virtual environment
+
+**Note:** PyWRKGame compiles C++ code during installation. This is normal and may take 2-5 minutes.
 
 ## 🚀 Quick Start
 

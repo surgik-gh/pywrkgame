@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Setup script for PyWRKGame 3.0.0
+Setup script for PyWRKGame 3.0.2
 """
 
 from setuptools import setup, Extension
@@ -8,6 +8,88 @@ from pybind11.setup_helpers import Pybind11Extension, build_ext
 from pybind11 import get_cmake_dir
 import pybind11
 import os
+import sys
+
+# Check for required C++ dependencies
+def check_cpp_dependencies():
+    """Check if required C++ libraries are available"""
+    missing_deps = []
+    
+    # Try to compile a simple test to check for GLM
+    try:
+        import tempfile
+        import subprocess
+        
+        test_code = """
+        #include <glm/glm.hpp>
+        int main() { return 0; }
+        """
+        
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.cpp', delete=False) as f:
+            f.write(test_code)
+            test_file = f.name
+        
+        try:
+            # Try to compile the test file
+            result = subprocess.run(
+                ['cl.exe' if sys.platform == 'win32' else 'g++', '-c', test_file, '-o', test_file + '.o'],
+                capture_output=True,
+                timeout=5
+            )
+            if result.returncode != 0:
+                missing_deps.append('GLM (OpenGL Mathematics)')
+        except:
+            missing_deps.append('GLM (OpenGL Mathematics)')
+        finally:
+            try:
+                os.unlink(test_file)
+                if os.path.exists(test_file + '.o'):
+                    os.unlink(test_file + '.o')
+            except:
+                pass
+    except:
+        pass
+    
+    if missing_deps:
+        error_msg = """
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    MISSING C++ DEPENDENCIES                                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+PyWRKGame requires the following C++ libraries to be installed:
+  • GLM (OpenGL Mathematics)
+  • Box2D (2D Physics)
+  • Bullet3 (3D Physics)
+
+Please install them before installing PyWRKGame:
+
+Windows (vcpkg):
+  git clone https://github.com/Microsoft/vcpkg.git
+  cd vcpkg
+  .\\bootstrap-vcpkg.bat
+  .\\vcpkg install glm box2d bullet3
+  .\\vcpkg integrate install
+
+Linux (Ubuntu/Debian):
+  sudo apt-get update
+  sudo apt-get install libglm-dev libbox2d-dev libbullet-dev build-essential
+
+macOS:
+  brew install glm box2d bullet
+
+After installing dependencies, try again:
+  pip install pywrkgame
+
+For more information, visit:
+  https://github.com/surgik-gh/pywrkgame#installation
+
+"""
+        print(error_msg, file=sys.stderr)
+        # Don't fail immediately - let the build try and show the actual error
+        # sys.exit(1)
+
+# Run dependency check
+check_cpp_dependencies()
 
 # Read the README for long description
 def read_long_description():
@@ -83,7 +165,7 @@ ext_modules = [
 
 setup(
     name="pywrkgame",
-    version="3.0.2",
+    version="3.0.3",
     author="WorkerAI",
     author_email="workerai@gmail.com",
     url="https://github.com/your-org/pywrkgame",
