@@ -1,4 +1,4 @@
-# PyWRKGame 3.0.0
+# PyWRKGame 3.0.1
 
 🎮 **High-Performance Game Engine for Python**
 
@@ -26,6 +26,42 @@ PyWRKGame 3.0.0 is a revolutionary game development library with a C/C++ core an
 - **[Examples](examples/)** - Sample games for each template
 - **[Python API Summary](docs/PYTHON_API.md)** - High-level Python API overview
 - **[Python Bindings](docs/PYTHON_BINDINGS_SUMMARY.md)** - C++ to Python binding details
+
+## 📦 Installation
+
+### Prerequisites
+
+PyWRKGame requires C++ dependencies for compilation. Install them first:
+
+**Windows (using vcpkg):**
+```bash
+# Install vcpkg
+git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+.\bootstrap-vcpkg.bat
+
+# Install dependencies
+.\vcpkg install glm box2d bullet3
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt-get update
+sudo apt-get install libglm-dev libbox2d-dev libbullet-dev build-essential
+```
+
+**macOS:**
+```bash
+brew install glm box2d bullet
+```
+
+### Install PyWRKGame
+
+```bash
+pip install pywrkgame
+```
+
+**Note:** PyWRKGame is currently distributed as source code and compiles during installation. Pre-built wheels coming soon!
 
 ## 🚀 Quick Start
 

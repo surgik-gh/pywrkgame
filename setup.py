@@ -83,7 +83,7 @@ ext_modules = [
 
 setup(
     name="pywrkgame",
-    version="3.0.0",
+    version="3.0.1",
     author="PyWRKGame Team",
     author_email="team@pywrkgame.com",
     url="https://github.com/your-org/pywrkgame",
