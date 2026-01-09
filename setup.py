@@ -84,8 +84,8 @@ ext_modules = [
 setup(
     name="pywrkgame",
     version="3.0.1",
-    author="PyWRKGame Team",
-    author_email="team@pywrkgame.com",
+    author="WorkerAI",
+    author_email="workerai@gmail.com",
     url="https://github.com/your-org/pywrkgame",
     description="High-performance game engine with Python bindings for 2D/3D games",
     long_description=read_long_description(),
@@ -96,6 +96,9 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         "pybind11>=2.6.0",
+        "glm",
+        "box2d",
+        "bullet3",
     ],
     extras_require={
         "test": ["pytest>=6.0", "hypothesis>=6.0"],
