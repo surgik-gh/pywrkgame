@@ -1,4 +1,4 @@
-# PyWRKGame 3.0.1
+# PyWRKGame 3.0.2
 
 🎮 **High-Performance Game Engine for Python**
 
